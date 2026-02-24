@@ -1,4 +1,4 @@
-Privacy Policy
+## Privacy Policy
 
 By using this Bot, you agree to the following:
 
