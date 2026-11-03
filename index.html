@@ -1,114 +1,315 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service and Privacy Policy</title>
+    <title>Terms of Service and Privacy Policy - Bacon Bypass Bot</title>
     <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --card-sub: #252525;
+            --border-color: #333333;
+            --text-main: #e0e0e0;
+            --text-muted: #a0a0a0;
+            --heading-color: #ffffff;
+            --accent-color: #5865F2;
+            --accent-danger: #ed4245;
+            --accent-warning: #fee75c;
+        }
+
         body {
-            background-color: #121212;
-            color: #e0e0e0;
+            background-color: var(--bg-color);
+            color: var(--text-main);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
+            line-height: 1.7;
             margin: 0;
-            padding: 2rem 1rem;
+            padding: 2.5rem 1rem;
             display: flex;
             justify-content: center;
         }
+
         .container {
-            max-width: 820px;
+            max-width: 880px;
             width: 100%;
-            background-color: #1e1e1e;
-            padding: 2.5rem 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            background-color: var(--card-bg);
+            padding: 2.5rem 2.2rem;
+            border-radius: 10px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+            border: 1px solid var(--border-color);
         }
-        h2 {
-            color: #ffffff;
-            font-weight: 500;
-            font-size: 1.8rem;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            border-bottom: 1px solid #333;
-            padding-bottom: 0.4rem;
-        }
-        h2:first-of-type {
+
+        h1 {
+            color: var(--heading-color);
+            font-size: 2.2rem;
+            font-weight: 700;
             margin-top: 0;
+            margin-bottom: 0.5rem;
+            text-align: center;
         }
+
+        .subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 2.5rem;
+        }
+
+        h2 {
+            color: var(--heading-color);
+            font-weight: 600;
+            font-size: 1.5rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        h3 {
+            color: var(--heading-color);
+            font-size: 1.15rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
         p {
-            margin: 1.2rem 0;
-            color: #d0d0d0;
-        }
-        ul {
-            padding-left: 1.8rem;
             margin: 1rem 0;
+            color: var(--text-main);
         }
+
+        ul {
+            padding-left: 1.6rem;
+            margin: 0.8rem 0;
+        }
+
         li {
-            margin-bottom: 0.6rem;
-            color: #d0d0d0;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
         }
-        ul ul {
-            margin: 0.4rem 0 0.8rem 1.2rem;
+
+        li strong {
+            color: var(--heading-color);
         }
-        strong {
-            color: #ffffff;
+
+        code {
+            background-color: #2b2d31;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.88em;
+            color: #5865f2;
+            font-family: Consolas, "Courier New", monospace;
+        }
+
+        .callout-box {
+            background-color: var(--card-sub);
+            padding: 1.2rem 1.4rem;
+            border-radius: 6px;
+            margin: 1.2rem 0;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .callout-box.warning {
+            border-left-color: var(--accent-warning);
+        }
+
+        .callout-box p {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        .badge-admin {
+            background-color: var(--accent-danger);
+            color: #fff;
+            font-size: 0.72rem;
+            padding: 0.15rem 0.45rem;
+            border-radius: 4px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            vertical-align: middle;
+        }
+
+        .badge-user {
+            background-color: var(--accent-color);
+            color: #fff;
+            font-size: 0.72rem;
+            padding: 0.15rem 0.45rem;
+            border-radius: 4px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            vertical-align: middle;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.2rem 0;
+            font-size: 0.92rem;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 0.8rem 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: var(--card-sub);
+            color: var(--heading-color);
             font-weight: 600;
         }
+
+        tr:hover {
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+
         .footer {
-            margin-top: 3rem;
-            padding-top: 1.2rem;
+            margin-top: 3.5rem;
+            padding-top: 1.5rem;
             text-align: center;
-            font-size: 0.9rem;
-            color: #888;
-            border-top: 1px solid #333;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
         }
-        .update-note {
-            background-color: #2a2a2a;
-            padding: 1.2rem 1.5rem;
-            border-radius: 6px;
-            margin: 2rem 0 0.5rem 0;
-            border-left: 4px solid #555;
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
         }
-        .update-note p {
-            margin: 0;
+
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
 <div class="container">
-    <h2>Terms of Service</h2>
-    <p>By using this Bot, you acknowledge and agree that:</p>
-    <ul>
-        <li>Use of the Bot is <strong>entirely voluntary and at your own risk</strong>.</li>
-        <li>You may <strong>choose not to use the Bot</strong> if you do not accept these terms.</li>
-        <li>When you submit a URL to the Bot:
-            <ul>
-                <li>You are <strong>fully responsible</strong> for the URL you provide.</li>
-                <li>The Bot <strong>only processes the URL according to its predefined technical workflow</strong>.</li>
-                <li>The Bot <strong>does not guarantee success, safety, or accuracy</strong> of the returned result.</li>
-            </ul>
-        </li>
-        <li>The Bot <strong>is not responsible</strong> for any damage, loss, or consequences arising from the use of the Bot or its responses.</li>
-        <li>Abuse, spamming, or use of the Bot for illegal purposes may result in <strong>service restriction or termination</strong> without prior notice.</li>
-    </ul>
-    <p>By continuing to use the Bot, you confirm that you have <strong>read, understood, and agreed</strong> to these Terms of Service.</p>
+    <h1>Terms of Service & Privacy Policy</h1>
+    <div class="subtitle">Effective Date: November 2026 • Service: Bacon Bypass Discord Bot & API</div>
 
-    <h2>Privacy Policy</h2>
-    <p>By using this Bot, you agree to the following:</p>
-    <ul>
-        <li>The Bot <strong>does not collect personal information</strong> beyond what is required to process commands.</li>
-        <li>Any URL you submit to the Bot is <strong>used solely for processing your request</strong> and is <strong>not stored long-term</strong>.</li>
-        <li>The Bot <strong>does not track users or maintain usage history</strong>, except for minimal technical data required for operation and error handling.</li>
-        <li>All responses provided by the Bot are generated <strong>automatically through its processing system</strong>, without manual intervention.</li>
-    </ul>
-    <p>If you do not agree with this Privacy Policy, <strong>do not use the Bot</strong>.</p>
+    <!-- TERMS OF SERVICE -->
+    <h2>1. Terms of Service</h2>
+    <p>By inviting, configuring, or interacting with the <strong>Bacon Bypass Bot</strong> ("the Bot"), you explicitly acknowledge and agree to be legally bound by these Terms of Service. If you do not agree to every provision stated herein, you must immediately remove the Bot from your server and discontinue all use.</p>
 
-    <div class="update-note">
-        <p>We may update these Terms of Service and this Privacy Policy from time to time. Such updates may be infrequent and are typically made when new features or changes are added to the Bot. You have the right to request the most recent version of these terms by contacting us via <strong>https://discord.gg/SwFgtB5sGA</strong></strong>.</p>
+    <h3>1.1 "AS-IS" Provision & Absolute Disclaimer of Warranties</h3>
+    <p>The Bot and all associated services are provided strictly on an <strong>"AS-IS"</strong> and <strong>"AS-AVAILABLE"</strong> basis without warranties of any kind, whether express, statutory, or implied. Specifically:</p>
+    <ul>
+        <li>We make <strong>no guarantees</strong> regarding system uptime, uninterrupted availability, operational speed, or the accuracy and completeness of any returned results.</li>
+        <li>Bypass services rely on third-party link structures that change dynamically. A destination link may fail, break, or expire at any time without liability to the service operators.</li>
+        <li>We reserve the right at our sole discretion to modify, restrict, rate-limit, or suspend any part of the service at any time without prior notice.</li>
+    </ul>
+
+    <h3>1.2 User Responsibility & Lawful Use</h3>
+    <p>When you provide a URL or invoke commands through the Bot:</p>
+    <ul>
+        <li>You maintain <strong>exclusive legal and operational responsibility</strong> for any link, domain, or content you submit.</li>
+        <li>You represent and warrant that your use of the Bot complies with all applicable local and international laws, as well as the <a href="https://discord.com/terms" target="_blank" rel="noopener">Discord Terms of Service</a>.</li>
+        <li>The Bot operates solely as an automated technical utility processing web requests. We do not host, store, endorse, or verify third-party destination materials, nor do we assume responsibility for malware, deceptive landing pages, or intellectual property hosted on destination sites.</li>
+    </ul>
+
+    <h3>1.3 Discord Server Permissions (Administrator Rights)</h3>
+    <div class="callout-box warning">
+        <p><strong>Clarification on Server Permissions:</strong> The Bot may request administrative or elevated channel management permissions upon invitation. This permission is requested exclusively to avoid internal Discord permission conflicts (such as inability to send embedded responses, create temporary invite diagnostics, or interact in private or restricted channels).</p>
+    </div>
+    <ul>
+        <li><strong>Granting Administrator permission is completely optional.</strong> Server owners and administrators retain full discretion to customize, reduce, or revoke any permission assigned to the Bot via their Discord Server Settings at any time.</li>
+        <li>We do not require or force maximum permissions for standard usage. However, revoking permissions may cause commands to fail in certain channels where the Bot cannot view or post content.</li>
+        <li>The Bot developers and operators disclaim all liability for any permission conflicts, server misconfigurations, or operational disruptions arising from permissions granted or denied by server managers.</li>
+    </ul>
+
+    <h3>1.4 Bot Commands & Access Control</h3>
+    <p>The Bot features distinct tiers of commands. Regular server members can only access standard execution commands, while administrative controls are cryptographically locked to the authorized Bot Owner:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Command</th>
+                <th>Access Level</th>
+                <th>Description & Intended Operational Purpose</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>/bypass &lt;url&gt;</code></td>
+                <td><span class="badge-user">Public</span></td>
+                <td>Standard command to process and resolve supported shortener links. Subject to daily rate limits (10/day) and standard cooldowns.</td>
+            </tr>
+            <tr>
+                <td><code>/attack &lt;enabled&gt;</code></td>
+                <td><span class="badge-admin">Owner Only</span></td>
+                <td><strong>High-Load Failover Switch (NOT a malicious command):</strong> This is strictly an internal traffic-routing toggle. When enabled, it temporarily pauses Discord webhook logging and redirects incoming bypass requests directly to the web-based progress resolver (<code>baconbypass.xyz/progress</code>) to protect the bot against API congestion or rate limits. <em>It does not perform denial-of-service, flooding, or server destruction.</em></td>
+            </tr>
+            <tr>
+                <td><code>/blacklist &lt;add|remove&gt;</code></td>
+                <td><span class="badge-admin">Owner Only</span></td>
+                <td>Administrative security tool to bar malicious actors, automated spammers, or abusive entities from using the Bot.</td>
+            </tr>
+            <tr>
+                <td><code>/set-mode &lt;hidden|public&gt;</code></td>
+                <td><span class="badge-admin">Owner Only</span></td>
+                <td>Toggles output visibility across shards between ephemeral (hidden to others) and public embedded messages.</td>
+            </tr>
+            <tr>
+                <td><code>/log-channel &lt;channel&gt;</code></td>
+                <td><span class="badge-admin">Owner Only</span></td>
+                <td>Configures the internal audit channel and webhook for operational error diagnostics and abuse tracking.</td>
+            </tr>
+            <tr>
+                <td><code>/create-server &lt;serverid&gt;</code></td>
+                <td><span class="badge-admin">Owner Only</span></td>
+                <td>Administrative diagnostic utility used by the Bot Owner to inspect server connectivity and shard health.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>1.5 Limitation of Liability & Indemnification</h3>
+    <p>To the maximum extent permitted by applicable law, the operators, developers, and contributors of the Bot shall <strong>under no circumstances be liable</strong> for any direct, indirect, incidental, punitive, consequential, or exemplary damages, including but not limited to loss of data, Discord server penalties, loss of goodwill, or legal disputes resulting from:</p>
+    <ul>
+        <li>Your use or inability to use the Bot;</li>
+        <li>Content retrieved or downloaded from third-party links processed by the Bot;</li>
+        <li>Actions taken by server administrators or third-party platforms in connection with the Bot;</li>
+        <li>Temporary downtime, software bugs, rate limits, or permanent discontinuance of service.</li>
+    </ul>
+    <p>You agree to indemnify, defend, and hold harmless the Bot developers from any claims, damages, liabilities, or expenses (including legal fees) arising from your violation of these Terms or misuse of the service.</p>
+
+    <!-- PRIVACY POLICY -->
+    <h2>2. Privacy Policy</h2>
+    <p>We are dedicated to transparent, minimal data handling. This Privacy Policy details the technical data processed when interacting with the Bot.</p>
+
+    <h3>2.1 Data We Collect & Process</h3>
+    <p>We collect only the bare minimum technical metadata necessary to execute commands, mitigate abuse, and manage server quotas:</p>
+    <ul>
+        <li><strong>Discord User Identifiers:</strong> Your Discord User ID and Username/Tag are temporarily processed to enforce daily usage limits (e.g., 10 bypasses/day) and manage cooldowns.</li>
+        <li><strong>Server Metadata:</strong> Server (Guild) ID and Guild Name are included in technical diagnostic logs to track shard load and debug failed API interactions.</li>
+        <li><strong>Submitted URLs:</strong> The links you submit via <code>/bypass</code> are sent to our backend API solely to execute the requested bypass routine.</li>
+    </ul>
+
+    <h3>2.2 What We Do NOT Collect</h3>
+    <ul>
+        <li>We do <strong>not</strong> read, inspect, store, or log your personal messages, chat histories, or private server discussions.</li>
+        <li>We do <strong>not</strong> collect personal financial information, email addresses, passwords, or IP addresses through the Discord client interface.</li>
+    </ul>
+
+    <h3>2.3 Data Retention & Purging</h3>
+    <ul>
+        <li><strong>Daily Quotas:</strong> Stored usage counters associated with User IDs are automatically cleaned up and purged at UTC midnight on a daily cycle.</li>
+        <li><strong>Cached Results:</strong> Results stored for interactive copy buttons expire and are purged from memory within 5 minutes.</li>
+        <li><strong>Diagnostic Webhooks:</strong> Request logs sent to our internal logging channel are used purely for live error detection and anti-spam monitoring; they are not sold or redistributed to third parties.</li>
+    </ul>
+
+    <h3>2.4 Third-Party Services & External Links</h3>
+    <p>The Bot frequently outputs links directing users to third-party domains (including official websites like <code>baconbypass.xyz</code> or user-requested destination URLs). We have no control over the privacy policies, tracking mechanisms, or terms of third-party websites. Users access external websites at their own risk.</p>
+
+    <div class="callout-box">
+        <p><strong>Modifications to Policies:</strong> We may revise these Terms and Privacy provisions periodically to reflect functional updates or security adjustments. Continued interaction with the Bot after modifications constitutes full acceptance of the updated terms. Community members can verify the latest status or ask questions via our official support hub.</p>
     </div>
 
     <div class="footer">
-        © 2026 Bot Service. All rights reserved.
+        © 2026 Bacon Bypass. All rights reserved. • Support Discord: <a href="https://discord.gg/SwFgtB5sGA" target="_blank" rel="noopener">discord.gg/SwFgtB5sGA</a> • Website: <a href="https://baconbypass.xyz/" target="_blank" rel="noopener">baconbypass.xyz</a>
     </div>
 </div>
 </body>
